@@ -12,6 +12,7 @@
 # grab 6 lines from file (qstn, a, b, c, d, ca)
 # append to the list of questions and answers
 # shuffle the list of questions and answers
+# display the question and answers to the user
 # ask user for input of the answer
 # get the correct answer put it in a new variable
 # compare using if to user's answer
