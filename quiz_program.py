@@ -35,14 +35,14 @@ while line_number < len(file_lines):
 
 # append to the list of questions and answers
 
-        quiz_data.append({
+        quiz_data.append([
             question,
             answer_a,
             answer_b,
             answer_c,
             answer_d,
             correct_answer
-        })
+        ])
         line_number += 7
 
 # shuffle the list of questions and answers
@@ -50,7 +50,7 @@ while line_number < len(file_lines):
 # display the question and answers to the user
 
 for quiz_item in quiz_data:
-    print("/n" + quiz_item[0])
+    print("\n" + quiz_item[0])
     print(quiz_item[1])
     print(quiz_item[2])
     print(quiz_item[3])
@@ -62,7 +62,7 @@ for quiz_item in quiz_data:
 
 # get the correct answer put it in a new variable
 
-    correct_answer = quiz_item[5].split(": ")[1].strip()
+    correct_answer = quiz_item[5].split(": ")[1].strip().upper()
 
 # compare using if to user's answer
 # if correct, print correct
