@@ -47,6 +47,8 @@ while line_number < len(file_lines):
 
 # shuffle the list of questions and answers
 
+random.shuffle(quiz_data)
+
 # display the question and answers to the user
 
 for quiz_item in quiz_data:
