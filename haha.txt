@@ -12,3 +12,23 @@ C: Tondo
 D: Paranaque
 Correct Answer: A
 
+Question: How old am I?
+A: 12
+B: 14
+C: 16
+D: 19
+Correct Answer: D
+
+Question: Who am I?
+A: Bo horseman
+B: Iso from valorant
+C: Raphael Inducil
+D: Chewbaca
+Correct Answer: C
+
+Question: What is my favorite color?
+A: blue
+B: red
+C: yellow 
+D: green
+Correct Answer: D
