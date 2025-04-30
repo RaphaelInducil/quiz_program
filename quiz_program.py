@@ -4,6 +4,8 @@
 # assignment 10: quiz
 # Create the Quiz program that read the output file of the Quiz Creator. The user will answer the randomly selected question and check if the answer is correct.
 
+import random
+
 # user input for file (txt) name of what to read
 
 quiz_file = input("Enter the name of your quiz file (without .txt): ") + ".txt"
@@ -23,7 +25,7 @@ line_number = 0
 # grab 6 lines from file (qstn, a, b, c, d, ca)
 
 while line_number < len(file_lines):
-    if file_lines[line_number}.startswith("Question: ")]
+    if file_lines[line_number].startswith("Question: "):
         question = file_lines[line_number].strip()
         answer_a = file_lines[line_number + 1].strip()
         answer_b = file_lines[line_number + 2].strip()
@@ -34,7 +36,7 @@ while line_number < len(file_lines):
 # append to the list of questions and answers
 
         quiz_data.append({
-            question_line,
+            question,
             answer_a,
             answer_b,
             answer_c,
@@ -45,13 +47,37 @@ while line_number < len(file_lines):
 
 # shuffle the list of questions and answers
 
-random.shuffle(quiz_data)
-
 # display the question and answers to the user
+
+for quiz_item in quiz_data:
+    print("/n" + quiz_item[0])
+    print(quiz_item[1])
+    print(quiz_item[2])
+    print(quiz_item[3])
+    print(quiz_item[4])
+
 # ask user for input of the answer
+
+    user_answer = input("Your answer (A, B, C, D): ").strip().upper()
+
 # get the correct answer put it in a new variable
+
+    correct_answer = quiz_item[5].split(": ")[1].strip()
+
 # compare using if to user's answer
 # if correct, print correct
 # else print wrong and show the correct answer
+
+    if user_answer == correct_answer:
+        print("Correct!")
+    else:
+        print("Wrong! The correct answer is: " + correct_answer)
+
 # loop to ask another question
+
+    continue_quiz = input("Do you want to continue? (yes/no): ").strip().lower()
+    if continue_quiz != "yes":
+        print("Thank you for playing!")
+        break
+
 # done
