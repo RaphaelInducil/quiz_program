@@ -49,6 +49,10 @@ while line_number < len(file_lines):
 
 random.shuffle(quiz_data)
 
+# scoring system
+
+score = 0
+
 # display the question and answers to the user
 
 for quiz_item in quiz_data:
@@ -72,6 +76,7 @@ for quiz_item in quiz_data:
 
     if user_answer == correct_answer:
         print("Correct!")
+        score += 1
     else:
         print("Wrong! The correct answer is: " + correct_answer)
 
@@ -83,3 +88,5 @@ for quiz_item in quiz_data:
         break
 
 # done
+
+print(f"\nYou got {score} correct out of {len(quiz_data)}.")
